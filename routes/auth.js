@@ -50,6 +50,7 @@ router.post('/login', async (req, res) => {
 
     user.lastLogin = Date.now();
     user.isLogin = true;
+    user.loginCount += 1; 
     await user.save();
 
     const payload = { user: { id: user.id, userId: user.userId } };

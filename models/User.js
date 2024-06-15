@@ -33,6 +33,10 @@ const UserSchema = new mongoose.Schema({
     type: Number,
     unique: true
   },
+  loginCount: {
+    type: Number,
+    default: 0
+  },
   resetPasswordToken: String,
   resetPasswordExpires: Date
 });
